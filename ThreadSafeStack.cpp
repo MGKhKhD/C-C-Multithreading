@@ -113,7 +113,7 @@ int main(){
     ThreadSafeStack<int> tss;
     std::vector<std::thread> workers;
     ThreadSafeVector<int> vals;
-    for(int i=0; i<10; ++i){
+    for(int i=0; i<100; ++i){
         if(i<=8){
             auto payload{[i](ThreadSafeStack<int>& tss){
                 for(int j=0; j<=i; ++j) tss.push(i);
